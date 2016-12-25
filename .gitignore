@@ -1,4 +1,5 @@
 node_modules/
+deckgl-examples/
 
 .DS_Store
 .AppleDouble

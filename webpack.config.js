@@ -9,7 +9,7 @@ module.exports = {
   context: path.join(__dirname, "src"),
   entry: [
     'whatwg-fetch', // AJAX fetch polyfill - https://github.com/github/fetch
-    "./entry.js"
+    "./index.js"
   ],
   output: {
     // path: path.join(__dirname, "dist/js/"),
@@ -73,7 +73,8 @@ module.exports = {
     'react/lib/ExecutionEnvironment': true,
     'react/lib/ReactContext': true
   },
-  plugins: debug ? [] : [
+  // plugins: debug ? [] : [
+  plugins: [
     new ExtractTextPlugin('style.css', { allChunks: true }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
